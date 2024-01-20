@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
       "projectId": "0xf7j2sv",
       "dataset": "production"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-typescript", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-theme-ui", /* "gatsby-plugin-google-gtag", */ "gatsby-plugin-sitemap", {
+  }, "gatsby-plugin-image", "gatsby-plugin-typescript", "gatsby-plugin-sharp", "gatsby-transformer-sharp", /* "gatsby-plugin-google-gtag", */ "gatsby-plugin-sitemap", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",

@@ -1317,7 +1317,6 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
-  readonly allThemeUiConfig: ThemeUiConfigConnection;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
@@ -1329,7 +1328,6 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
-  readonly themeUiConfig: Maybe<ThemeUiConfig>;
 };
 
 
@@ -1418,14 +1416,6 @@ type Query_allSitePluginArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<SitePluginSortInput>>>;
-};
-
-
-type Query_allThemeUiConfigArgs = {
-  filter: InputMaybe<ThemeUiConfigFilterInput>;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-  sort: InputMaybe<ReadonlyArray<InputMaybe<ThemeUiConfigSortInput>>>;
 };
 
 
@@ -1677,16 +1667,6 @@ type Query_sitePluginArgs = {
   resolve: InputMaybe<StringQueryOperatorInput>;
   ssrAPIs: InputMaybe<StringQueryOperatorInput>;
   version: InputMaybe<StringQueryOperatorInput>;
-};
-
-
-type Query_themeUiConfigArgs = {
-  children: InputMaybe<NodeFilterListInput>;
-  id: InputMaybe<StringQueryOperatorInput>;
-  internal: InputMaybe<InternalFilterInput>;
-  parent: InputMaybe<NodeFilterInput>;
-  preset: InputMaybe<JSONQueryOperatorInput>;
-  prismPreset: InputMaybe<JSONQueryOperatorInput>;
 };
 
 /** Remote Interface */
@@ -3689,128 +3669,6 @@ type StringQueryOperatorInput = {
   readonly ne: InputMaybe<Scalars['String']>;
   readonly nin: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
   readonly regex: InputMaybe<Scalars['String']>;
-};
-
-type ThemeUiConfig = Node & {
-  readonly children: ReadonlyArray<Node>;
-  readonly id: Scalars['ID'];
-  readonly internal: Internal;
-  readonly parent: Maybe<Node>;
-  readonly preset: Maybe<Scalars['JSON']>;
-  readonly prismPreset: Maybe<Scalars['JSON']>;
-};
-
-type ThemeUiConfigConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<ThemeUiConfigEdge>;
-  readonly group: ReadonlyArray<ThemeUiConfigGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<ThemeUiConfig>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type ThemeUiConfigConnection_distinctArgs = {
-  field: ThemeUiConfigFieldSelector;
-};
-
-
-type ThemeUiConfigConnection_groupArgs = {
-  field: ThemeUiConfigFieldSelector;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type ThemeUiConfigConnection_maxArgs = {
-  field: ThemeUiConfigFieldSelector;
-};
-
-
-type ThemeUiConfigConnection_minArgs = {
-  field: ThemeUiConfigFieldSelector;
-};
-
-
-type ThemeUiConfigConnection_sumArgs = {
-  field: ThemeUiConfigFieldSelector;
-};
-
-type ThemeUiConfigEdge = {
-  readonly next: Maybe<ThemeUiConfig>;
-  readonly node: ThemeUiConfig;
-  readonly previous: Maybe<ThemeUiConfig>;
-};
-
-type ThemeUiConfigFieldSelector = {
-  readonly children: InputMaybe<NodeFieldSelector>;
-  readonly id: InputMaybe<FieldSelectorEnum>;
-  readonly internal: InputMaybe<InternalFieldSelector>;
-  readonly parent: InputMaybe<NodeFieldSelector>;
-  readonly preset: InputMaybe<FieldSelectorEnum>;
-  readonly prismPreset: InputMaybe<FieldSelectorEnum>;
-};
-
-type ThemeUiConfigFilterInput = {
-  readonly children: InputMaybe<NodeFilterListInput>;
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly internal: InputMaybe<InternalFilterInput>;
-  readonly parent: InputMaybe<NodeFilterInput>;
-  readonly preset: InputMaybe<JSONQueryOperatorInput>;
-  readonly prismPreset: InputMaybe<JSONQueryOperatorInput>;
-};
-
-type ThemeUiConfigGroupConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<ThemeUiConfigEdge>;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-  readonly group: ReadonlyArray<ThemeUiConfigGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<ThemeUiConfig>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type ThemeUiConfigGroupConnection_distinctArgs = {
-  field: ThemeUiConfigFieldSelector;
-};
-
-
-type ThemeUiConfigGroupConnection_groupArgs = {
-  field: ThemeUiConfigFieldSelector;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type ThemeUiConfigGroupConnection_maxArgs = {
-  field: ThemeUiConfigFieldSelector;
-};
-
-
-type ThemeUiConfigGroupConnection_minArgs = {
-  field: ThemeUiConfigFieldSelector;
-};
-
-
-type ThemeUiConfigGroupConnection_sumArgs = {
-  field: ThemeUiConfigFieldSelector;
-};
-
-type ThemeUiConfigSortInput = {
-  readonly children: InputMaybe<NodeSortInput>;
-  readonly id: InputMaybe<SortOrderEnum>;
-  readonly internal: InputMaybe<InternalSortInput>;
-  readonly parent: InputMaybe<NodeSortInput>;
-  readonly preset: InputMaybe<SortOrderEnum>;
-  readonly prismPreset: InputMaybe<SortOrderEnum>;
 };
 
 type TransformOptions = {

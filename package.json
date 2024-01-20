@@ -17,26 +17,24 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@mdx-js/react": "^3.0.0",
-    "@theme-ui/mdx": "^0.16.1",
-    "@types/node": "^20.11.5",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
     "gatsby": "^5.13.1",
     "gatsby-plugin-google-gtag": "^5.13.0",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-plugin-sitemap": "^6.13.0",
-    "gatsby-plugin-theme-ui": "^0.16.1",
     "gatsby-plugin-typescript": "^5.13.0",
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-source-sanity": "^7.9.1",
     "gatsby-transformer-sharp": "^5.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "theme-ui": "^0.16.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
     "prettier": "3.2.4"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }
