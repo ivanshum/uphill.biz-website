@@ -10,12 +10,7 @@ export const query = graphql`
   }
 `;
 function IndexPage({ data }: PageProps<Queries.IndexPageQuery>) {
-  return (
-    <div>
-      {data.sanityPage?.title}
-      <img src="asd.jpeg" />
-    </div>
-  );
+  return <div>{data.sanityPage?.title}</div>;
 }
 
 export default IndexPage;
